@@ -27,7 +27,7 @@ function HeroSection() {
                         <p
                             style={{ color: mode === 'dark' ? 'white' : 'white' }}
                             className="sm:text-3xl text-xl font-extralight sm:mx-auto ">
-                            this is a small project i do to stop my self form doing stupid thing
+                            this is a small project i do to stop my self from doing stupid thing
                         </p>
                     </div>
                 </main>
