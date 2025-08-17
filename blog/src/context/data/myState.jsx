@@ -1,0 +1,73 @@
+import React, { useEffect, useState } from 'react'
+import MyContext from './myContext';
+import { collection, deleteDoc, onSnapshot, orderBy, query, QuerySnapshot, doc } from 'firebase/firestore';
+import { fireDB } from '../../firebase/FirebaseConfig';
+
+function MyState(props) {
+    const [searchkey, setSearchkey] = useState('')
+    const [loading, setloading] = useState(false);
+    const [getAllBlog, setGetAllBlog] = useState([]);
+    const [mode, setMode] = useState('light'); // Whether dark mode is enabled or not
+    const toggleMode = () => {
+        if (mode === 'light') {
+            setMode('dark');
+            document.body.style.backgroundColor = 'rgb(17, 24, 39)';
+        }
+        else {
+            setMode('light');
+            document.body.style.backgroundColor = 'white';
+        }
+    }
+
+
+    function getAllBlogs() {
+        setloading(true);
+        try {
+            const q = query(
+                collection(fireDB, "blogpost"),
+                orderBy('time')
+            );
+            const data = onSnapshot(q, (QuerySnapshot) => {
+                let blogArray = [];
+                QuerySnapshot.forEach((doc) => {
+                    blogArray.push({ ...doc.data(), id: doc.id })
+                });
+                setGetAllBlog(blogArray)
+                setloading(false)
+            });
+            return () => data;
+        }
+        catch (error) {
+            console.log(error)
+            setloading(false)
+        }
+    }
+    useEffect(() => {
+        getAllBlogs();
+    }, []);
+    const deleteBlogs = async (id) => {
+        try {
+            await deleteDoc(doc(fireDB, "blogpost", id));
+            getAllBlogs()
+            toast.success("Blogs deleted successfully")
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    return (
+        <MyContext.Provider value={{
+            mode,
+            toggleMode,
+            searchkey,
+            setSearchkey,
+            loading,
+            setloading,
+            getAllBlog,
+            deleteBlogs
+        }}>
+            {props.children}
+        </MyContext.Provider>
+    )
+}
+
+export default MyState
