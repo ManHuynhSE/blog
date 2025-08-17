@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import Layout from '../../../components/layout/Layout'
-import myContext from '../../../context/data/myContext';
+import Layout from '../../../components/layout/Layout.jsx'
+import myContext from '../../../context/data/myContext.jsx';
 import { Button } from '@material-tailwind/react';
 import { Link, useNavigate } from 'react-router-dom';
 

@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 import { BsFillArrowLeftCircleFill } from "react-icons/bs"
-import myContext from '../../../context/data/myContext';
+import myContext from '../../../context/data/myContext.jsx';
 import { Link, useNavigate } from "react-router-dom";
 import {
     Button,
@@ -9,7 +9,7 @@ import {
 } from "@material-tailwind/react";
 import toast from 'react-hot-toast';
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
-import { fireDB } from '../../../firebase/FirebaseConfig';
+import { fireDB } from '../../../firebase/FirebaseConfig.jsx';
 function CreateBlog() {
     const context = useContext(myContext);
     const { mode } = context;

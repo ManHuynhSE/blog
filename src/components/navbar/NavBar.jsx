@@ -9,9 +9,9 @@ import {
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineShareAlt, AiOutlineSearch } from 'react-icons/ai'
-import myContext from "../../context/data/myContext";
-import SearchDialog from "../search/SearchDialog";
-import ShareDialogBox from "../shareBox/ShareDialogBox";
+import myContext from "../../context/data/myContext.jsx";
+import SearchDialog from "../search/SearchDialog.jsx";
+import ShareDialogBox from "../shareBox/ShareDialogBox.jsx";
 
 export default function Nav() {
     const [openNav, setOpenNav] = React.useState(false);

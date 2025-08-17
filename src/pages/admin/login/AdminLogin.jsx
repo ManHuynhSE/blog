@@ -7,11 +7,11 @@ import {
     Button,
     Typography,
 } from "@material-tailwind/react";
-import myContext from "../../../context/data/myContext";
+import myContext from "../../../context/data/myContext.jsx";
 import { useNavigate } from "react-router";
 import toast from "react-hot-toast";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../../firebase/FirebaseConfig";
+import { auth } from "../../../firebase/FirebaseConfig.jsx";
 
 
 export default function AdminLogin() {

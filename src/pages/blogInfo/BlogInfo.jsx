@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
-import myContext from '../../context/data/myContext';
+import myContext from '../../context/data/myContext.jsx';
 import { useParams } from 'react-router';
 import { addDoc, collection, doc, getDoc, onSnapshot, orderBy, query, QuerySnapshot, Timestamp } from 'firebase/firestore';
-import { fireDB } from '../../firebase/FirebaseConfig';
-import Layout from '../../components/layout/Layout';
-import Loader from '../../components/loader/Loader';
+import { fireDB } from '../../firebase/FirebaseConfig.jsx';
+import Layout from '../../components/layout/Layout.jsx';
+import Loader from '../../components/loader/Loader.jsx';
 import toast from 'react-hot-toast';
-import Comment from '../../components/comment/Comment';
+import Comment from '../../components/comment/Comment.jsx';
 function BlogInfo() {
     const context = useContext(myContext);
     const { mode, setloading, loading } = context;

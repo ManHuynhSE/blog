@@ -4,15 +4,15 @@ import {
   Routes,
 
 } from "react-router-dom";
-import Home from "../src/pages/home/Home";
-import Blog from "../src/pages/blog/Blog";
-import AllBlogs from "../src/pages/allBlog/AllBlog";
-import NoPage from "../src/pages/nopage/NoPage";
-import BlogInfo from "../src/pages/blogInfo/BlogInfo";
-import AdminLogin from "../src/pages/admin/login/AdminLogin";
-import Dashboard from "../src/pages/admin/dashBoard/DashBoard"
-import CreateBlog from "../src/pages/admin/createBlog/CreateBlog";
-import MyState from "./context/data/myState";
+import Home from "../src/pages/home/Home.jsx";
+import Blog from "../src/pages/blog/Blog.jsx";
+import AllBlogs from "../src/pages/allBlog/AllBlog.jsx";
+import NoPage from "../src/pages/nopage/NoPage.jsx";
+import BlogInfo from "../src/pages/blogInfo/BlogInfo.jsx";
+import AdminLogin from "../src/pages/admin/login/AdminLogin.jsx";
+import Dashboard from "../src/pages/admin/dashBoard/DashBoard.jsx"
+import CreateBlog from "../src/pages/admin/createBlog/CreateBlog.jsx";
+import MyState from "./context/data/myState.jsx";
 import { Toaster } from "react-hot-toast";
 function App() {
   return (

@@ -4,7 +4,7 @@ import {
     DialogBody,
     Input,
 } from "@material-tailwind/react";
-import myContext from "../../context/data/myContext";
+import myContext from "../../context/data/myContext.jsx";
 import { AiOutlineShareAlt, AiFillLinkedin, AiFillInstagram, AiFillGithub, AiFillFacebook } from 'react-icons/ai';
 
 export default function ShareDialogBox() {

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import myContext from '../../context/data/myContext';
-import Layout from '../../components/layout/Layout';
+import myContext from '../../context/data/myContext.jsx';
+import Layout from '../../components/layout/Layout.jsx';
 
 function AllBlogs() {
     const context = useContext(myContext);

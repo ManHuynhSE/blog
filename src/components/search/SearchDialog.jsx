@@ -4,7 +4,7 @@ import {
     DialogBody,
     Input,
 } from "@material-tailwind/react";
-import myContext from "../../context/data/myContext";
+import myContext from "../../context/data/myContext.jsx";
 import { AiOutlineSearch } from "react-icons/ai";
 
 export default function SearchDialog() {
