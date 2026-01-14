@@ -3,6 +3,10 @@
 This is a really simple project using firebase + react:
 https://blog-jze1.vercel.app/
 
+You can using this admin account:
+account:manchuadu18@gmail.com
+password:admin123
+
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
